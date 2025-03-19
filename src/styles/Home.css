@@ -1,0 +1,66 @@
+/* Default Light Mode */
+.home-page {
+  background-color: #f8f9fa;
+  color: #333;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.home-page.dark-mode {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+}
+
+/* Dark Mode Button */
+.toggle-dark-mode {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 20px;
+  padding: 8px 15px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #007bff, #6610f2);
+  padding: 100px 0;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Features Section */
+.features-section {
+  padding: 50px 0;
+}
+
+.feature-card {
+  border: none;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .hero-section {
+  background: linear-gradient(to right, #222, #555);
+}
+
+.dark-mode .feature-card {
+  background: #333;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
