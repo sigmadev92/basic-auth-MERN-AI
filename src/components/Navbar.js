@@ -42,9 +42,14 @@ const NavigationBar = () => {
               </Nav.Link>
             )}
             {user && (
-              <Nav.Link as={Link} to="/profile">
-                Profile
-              </Nav.Link>
+              <>
+                <Nav.Link as={Link} to="/profile">
+                  Profile
+                </Nav.Link>
+                <Nav.Link as={Link} to="/feed">
+                  Feed
+                </Nav.Link>
+              </>
             )}
 
             {/* Show Dashboard Link Only When Logged In */}

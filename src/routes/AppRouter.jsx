@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { baseURL } from "../functions/urls";
 import VerifyUser from "../pages/VerifyUser";
+import Feed from "../pages/Feed";
 const AppRouter = () => {
   const { setUser } = useContext(UserContext);
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ const AppRouter = () => {
         },
       });
       if (response.data.status) {
-        console.log(response.data);
+        // console.log(response.data);
         setUser(response.data.user);
       } else {
         setUser(null);
@@ -44,6 +45,7 @@ const AppRouter = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/verify/:token" element={<VerifyUser />} />
+        <Route path="/feed" element={<Feed />} />
         <Route path="*" element={<NotFound />} /> {/* 404 Page */}
       </Routes>
     </Layout>
