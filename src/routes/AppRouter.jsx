@@ -15,7 +15,7 @@ import { baseURL } from "../functions/urls";
 import VerifyUser from "../pages/VerifyUser";
 import Feed from "../pages/Feed";
 const AppRouter = () => {
-  const { setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -35,7 +35,7 @@ const AppRouter = () => {
       }
     };
     if (token.length > 1) fetcht();
-  }, []);
+  }, [user, navigate, setUser]);
   return (
     <Layout>
       <Routes>
